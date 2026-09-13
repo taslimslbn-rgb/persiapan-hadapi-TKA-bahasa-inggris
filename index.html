@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+<title>Lab Maya — Materi TKA Bahasa Inggris SMA/SMK (Kisi-Kisi)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-deep:#16241d;
+    --bg-deep-2:#1d2f26;
+    --parchment:#f4eedb;
+    --parchment-2:#ece2c6;
+    --ink:#202b22;
+    --ink-soft:#4a564b;
+    --gold:#d9a441;
+    --gold-dark:#a97a26;
+    --teal:#2e6e62;
+    --teal-light:#5b9c8e;
+    --line: rgba(32,43,34,0.14);
+    --shadow: 0 18px 40px -20px rgba(10,16,12,0.45);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(circle at 12% 8%, rgba(217,164,65,0.10), transparent 40%),
+      radial-gradient(circle at 90% 85%, rgba(91,156,142,0.14), transparent 45%),
+      var(--bg-deep);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    min-height:100vh;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:28px 20px 70px;}
+  .masthead{color:var(--parchment);margin-bottom:22px;}
+  .masthead .eyebrow{font-family:'IBM Plex Mono', monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-light);margin-bottom:6px;}
+  .masthead h1{font-family:'Fraunces', serif;font-weight:700;font-size:clamp(24px,4vw,32px);line-height:1.1;margin:0 0 8px;color:var(--parchment);}
+  .masthead h1 em{color:var(--gold);font-style:normal;}
+  .masthead p{margin:0;font-size:14px;color:rgba(244,238,219,0.75);max-width:65ch;line-height:1.6;}
+
+  .tabbar{
+    display:flex;gap:6px;flex-wrap:wrap;margin:20px 0 18px;
+    background:rgba(244,238,219,0.06);padding:6px;border-radius:12px;
+    border:1px solid rgba(217,164,65,0.18);
+  }
+  .tab-btn{
+    appearance:none;border:none;cursor:pointer;
+    font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:.02em;
+    padding:9px 13px;border-radius:8px;background:transparent;color:rgba(244,238,219,0.7);
+    transition:background .15s ease, color .15s ease;
+    white-space:nowrap;
+  }
+  .tab-btn:hover{background:rgba(244,238,219,0.10);color:var(--parchment);}
+  .tab-btn.active{background:var(--gold);color:#2a1f08;}
+  .tab-btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
+
+  .panel{
+    background:var(--parchment);border-radius:14px;box-shadow:var(--shadow);
+    padding:30px clamp(18px,4vw,40px);border:1px solid rgba(32,43,34,0.06);
+    display:none;
+  }
+  .panel.active{display:block;animation:fadeIn .25s ease;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+
+  .bab-tag{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:8px;display:block;}
+  .panel h2{font-family:'Fraunces',serif;font-size:24px;margin:0 0 14px;color:var(--ink);}
+  .panel h3{font-family:'Fraunces',serif;font-size:17px;margin:22px 0 10px;color:var(--ink);}
+  .panel h3:first-of-type{margin-top:6px;}
+  .panel p{font-size:14.5px;line-height:1.75;color:var(--ink);margin:0 0 12px;}
+  .panel ul, .panel ol{margin:0 0 14px;padding-left:22px;}
+  .panel li{font-size:14.5px;line-height:1.7;color:var(--ink);margin-bottom:6px;}
+  .panel table{width:100%;border-collapse:collapse;margin:12px 0 20px;font-size:13.5px;}
+  .panel table th, .panel table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+  .panel table th{background:rgba(46,110,98,0.10);color:var(--ink);font-weight:600;}
+  .callout{
+    background:var(--parchment-2);border-left:3px solid var(--gold);border-radius:8px;
+    padding:14px 18px;margin:16px 0;font-size:14px;line-height:1.65;color:var(--ink);
+  }
+  .callout b{color:var(--gold-dark);}
+  .ex{
+    font-family:'IBM Plex Mono',monospace;font-size:13px;background:rgba(46,110,98,0.07);
+    border-radius:6px;padding:2px 7px;color:var(--teal);
+  }
+  .soal-card{
+    border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin-bottom:16px;background:rgba(255,255,255,.35);
+  }
+  .soal-card .soal-num{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:6px;display:block;}
+  .soal-type-badge{
+    display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.05em;
+    background:var(--teal);color:#fbf7ea;padding:4px 10px;border-radius:999px;margin-bottom:10px;
+  }
+  .soal-card .soal-q{font-weight:500;margin-bottom:10px;}
+  .soal-card .soal-opts{margin:0 0 10px;padding-left:20px;}
+  .soal-card .soal-opts li{margin-bottom:4px;}
+  .soal-card .soal-opts li.opt-correct{color:var(--teal);font-weight:600;}
+  .soal-card .soal-ans{font-size:13.5px;color:var(--teal);font-weight:600;margin-bottom:4px;}
+  .soal-card .soal-exp{font-size:13.5px;color:var(--ink-soft);line-height:1.6;}
+  .soal-cat-table{width:100%;border-collapse:collapse;font-size:13px;margin:0 0 10px;}
+  .soal-cat-table th, .soal-cat-table td{border:1px solid var(--line);padding:8px 10px;text-align:center;}
+  .soal-cat-table th{background:rgba(46,110,98,0.10);color:var(--ink);font-weight:600;}
+  .soal-cat-table td:first-child{text-align:left;color:var(--ink);}
+  .soal-cat-table td.cell-correct{background:rgba(63,125,92,0.18);font-weight:700;color:var(--teal);}
+  .soal-check-opts{list-style:none;margin:0 0 10px;padding:0;display:flex;flex-direction:column;gap:6px;}
+  .soal-check-opts li{
+    display:flex;align-items:flex-start;gap:9px;font-size:14.5px;line-height:1.5;color:var(--ink);
+    padding:7px 10px;border-radius:7px;border:1px solid var(--line);background:rgba(255,255,255,.4);
+  }
+  .soal-check-opts li input[type="checkbox"]{
+    margin-top:3px;width:16px;height:16px;flex:0 0 auto;accent-color:var(--teal);
+  }
+  .soal-check-opts li.opt-correct{border-color:var(--teal);background:rgba(46,110,98,0.08);font-weight:600;}
+  .nav-buttons{display:flex;justify-content:space-between;margin-top:26px;gap:10px;}
+  .nav-btn{
+    appearance:none;border:1.5px solid var(--teal);background:transparent;color:var(--teal);
+    font-family:'IBM Plex Sans',sans-serif;font-weight:600;font-size:13.5px;
+    padding:9px 16px;border-radius:8px;cursor:pointer;transition:background .15s ease;
+  }
+  .nav-btn:hover{background:rgba(46,110,98,0.08);}
+  .nav-btn:disabled{opacity:.35;cursor:not-allowed;}
+  footer.note{max-width:920px;margin:26px auto 0;color:rgba(244,238,219,0.55);font-family:'IBM Plex Mono',monospace;font-size:11px;text-align:center;padding:0 20px;}
+
+  @media (max-width:600px){
+    .wrap{padding:20px 14px 60px;}
+    .masthead h1{font-size:22px;}
+    .panel{padding:20px 16px;border-radius:12px;}
+    .panel h2{font-size:20px;}
+    .tab-btn{font-size:10.5px;padding:8px 10px;}
+    .panel table{font-size:12px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="masthead">
+    <div class="eyebrow">Lab Maya · Materi Persiapan TKA Bahasa Inggris SMA/SMK</div>
+    <h1>Lab Maya: <em>Kisi-Kisi &amp; Materi</em><br>TKA Bahasa Inggris SMA/SMK</h1>
+    <p>Ruang belajar virtual berisi pembahasan detail tiap bab, dirangkum dan dikembangkan dari kisi-kisi umum TKA Bahasa Inggris SMA/SMK: grammar lanjutan, ragam jenis teks (genre), reading comprehension, vocabulary in context, strategi belajar, hingga contoh soal dan pembahasannya. Gunakan tab di bawah untuk berpindah antar bab.</p>
+  </div>
+
+  <div class="tabbar" id="tabbar">
+    <button class="tab-btn active" data-tab="0">Mengenal TKA</button>
+    <button class="tab-btn" data-tab="1">Kisi-Kisi</button>
+    <button class="tab-btn" data-tab="2">Tenses &amp; Pasif</button>
+    <button class="tab-btn" data-tab="3">Conditional &amp; Reported Speech</button>
+    <button class="tab-btn" data-tab="4">Jenis Teks</button>
+    <button class="tab-btn" data-tab="5">Reading &amp; Vocabulary</button>
+    <button class="tab-btn" data-tab="6">Strategi Belajar</button>
+    <button class="tab-btn" data-tab="7">Contoh Soal &amp; Penutup</button>
+  </div>
+
+  <!-- BAB 1 -->
+  <section class="panel active" data-panel="0">
+    <h2>Mengenal TKA Bahasa Inggris SMA/SMK</h2>
+
+    <h3>A. Apa Itu TKA Bahasa Inggris SMA/SMK?</h3>
+    <p>Tes Kemampuan Akademik (TKA) Bahasa Inggris untuk jenjang SMA/SMK dirancang untuk mengukur kemampuan berbahasa Inggris siswa pada level yang lebih kompleks dibandingkan jenjang sebelumnya. Fokusnya bukan sekadar mengetahui aturan tata bahasa secara hafalan, melainkan kemampuan <b>bernalar dalam memahami teks</b> — mengenali struktur, tujuan, dan makna tersirat dari sebuah bacaan.</p>
+    <p>Karena itu, soal-soal TKA disusun berdasarkan konteks nyata: artikel berita, laporan singkat, prosedur kerja, korespondensi sederhana, hingga teks naratif dan deskriptif. Bagi siswa SMK, teks-teks ini sering dikaitkan dengan bidang keahlian masing-masing, misalnya instruksi kerja atau laporan teknis.</p>
+
+    <div class="callout"><b>Poin penting:</b> TKA menilai kemampuan <i>menerapkan</i> bahasa dalam konteks, bukan mengingat definisi tata bahasa secara terpisah. Latihan paling efektif adalah membaca banyak jenis teks otentik, bukan hanya menghafal rumus.</div>
+
+    <h3>B. Komponen yang Diukur</h3>
+    <ul>
+      <li><b>Grammar Lanjutan</b> — penguasaan tenses (present, past, future dalam bentuk simple, continuous, perfect), passive voice, conditional sentences, dan reported speech.</li>
+      <li><b>Text Types (Genre)</b> — pemahaman struktur generik dan tujuan komunikasi berbagai jenis teks: naratif, recount, deskriptif, laporan, eksposisi, dan prosedur.</li>
+      <li><b>Reading Comprehension</b> — kemampuan menemukan ide pokok, informasi rinci, tujuan penulis, dan menafsirkan rujukan kata dalam teks yang lebih panjang dan kompleks.</li>
+      <li><b>Vocabulary in Context</b> — kemampuan menebak makna kata sulit berdasarkan petunjuk dalam kalimat sekitarnya, termasuk sinonim, antonim, dan referensi kata.</li>
+    </ul>
+  </section>
+
+  <!-- BAB 2 -->
+  <section class="panel" data-panel="1">
+    <h2>Kisi-Kisi Terbaru</h2>
+
+    <h3>A. Ruang Lingkup Materi</h3>
+    <p>Kisi-kisi TKA Bahasa Inggris SMA/SMK disusun berdasarkan capaian pembelajaran tingkat menengah atas, dengan penekanan pada kemampuan berbahasa dalam konteks akademik sekaligus dunia kerja. Berikut ringkasan ruang lingkupnya:</p>
+    <table>
+      <thead><tr><th>Domain</th><th>Indikator yang Diuji</th></tr></thead>
+      <tbody>
+        <tr><td>Grammar — Tenses</td><td>Simple, continuous, dan perfect tense dalam bentuk present, past, dan future</td></tr>
+        <tr><td>Grammar — Passive &amp; Conditional</td><td>Kalimat pasif, conditional sentences tipe 1–3, reported speech</td></tr>
+        <tr><td>Text Types</td><td>Narrative, recount, descriptive, report, analytical exposition, procedure text</td></tr>
+        <tr><td>Reading Comprehension</td><td>Main idea, informasi rinci, tujuan penulis, referensi kata dalam teks</td></tr>
+        <tr><td>Vocabulary in Context</td><td>Sinonim, antonim, dan makna kata berdasarkan konteks kalimat</td></tr>
+      </tbody>
+    </table>
+
+    <h3>B. Bentuk dan Karakteristik Soal</h3>
+    <p>Soal umumnya berbentuk pilihan ganda dengan stimulus teks yang lebih panjang dan kompleks dibanding jenjang sebelumnya — menyerupai artikel, laporan singkat, atau teks prosedural. Beberapa ciri khasnya:</p>
+    <ul>
+      <li>Soal grammar disajikan dalam <b>konteks kalimat utuh atau paragraf</b>, bukan kalimat lepas tanpa konteks.</li>
+      <li>Soal reading comprehension menuntut analisis struktur teks — misalnya mengenali tujuan penulis atau menyimpulkan pesan tersirat, bukan sekadar mencari jawaban tersurat.</li>
+      <li>Soal vocabulary in context menuntut siswa menentukan makna kata dari petunjuk kalimat sekitarnya, bukan hafalan arti kata secara terpisah.</li>
+      <li>Teks pada soal bertema SMK sering dikaitkan dengan dunia kerja: instruksi kerja, laporan teknis, atau korespondensi bisnis sederhana.</li>
+    </ul>
+  </section>
+
+  <!-- BAB 3 -->
+  <section class="panel" data-panel="2">
+    <h2>Tenses dan Kalimat Pasif</h2>
+
+    <h3>A. Ragam Tenses Kunci</h3>
+    <p>Penguasaan tenses menjadi materi inti karena digunakan untuk menyatakan waktu dan aspek kejadian secara tepat dalam berbagai jenis teks. Berikut lima bentuk kunci beserta pola dan contohnya:</p>
+    <table>
+      <thead><tr><th>Tense</th><th>Pola / Formula</th><th>Fungsi &amp; Contoh</th></tr></thead>
+      <tbody>
+        <tr><td>Simple Present</td><td>S + V1(s/es)</td><td>Fakta umum, kebiasaan — <span class="ex">Water boils at 100°C.</span></td></tr>
+        <tr><td>Present Continuous</td><td>S + is/am/are + V-ing</td><td>Kegiatan sedang berlangsung — <span class="ex">She is writing a report.</span></td></tr>
+        <tr><td>Simple Past</td><td>S + V2</td><td>Kejadian selesai di masa lalu — <span class="ex">They visited Bali last year.</span></td></tr>
+        <tr><td>Present Perfect</td><td>S + has/have + V3</td><td>Kejadian yang relevan dengan masa kini — <span class="ex">I have finished my homework.</span></td></tr>
+        <tr><td>Simple Future</td><td>S + will + V1</td><td>Rencana atau prediksi — <span class="ex">We will meet tomorrow.</span></td></tr>
+      </tbody>
+    </table>
+    <div class="callout"><b>Tips mengajar/belajar:</b> Bandingkan tenses dalam satu tabel, jangan dihafal terpisah-pisah. Perhatikan kata kunci waktu yang sering menyertainya, misalnya <span class="ex">last year</span> untuk simple past, atau <span class="ex">already</span>/<span class="ex">just</span> untuk present perfect.</div>
+
+    <h3>B. Passive Voice</h3>
+    <p>Kalimat pasif digunakan ketika fokus kalimat diarahkan pada objek yang menerima tindakan, bukan pada pelaku tindakannya. Struktur ini sering muncul dalam teks laporan dan prosedural, karena penulis ingin menekankan proses atau hasil, bukan siapa pelakunya.</p>
+    <ul>
+      <li>Struktur dasar: <b>objek + to be + past participle (V3)</b>, contoh: <span class="ex">The report was written by the team.</span></li>
+      <li>Perubahan dari kalimat aktif ke pasif memerlukan penyesuaian bentuk <i>to be</i> sesuai tense kalimat aslinya.</li>
+    </ul>
+    <table>
+      <thead><tr><th>Tense (Aktif)</th><th>Bentuk Pasif</th><th>Contoh</th></tr></thead>
+      <tbody>
+        <tr><td>Simple Present</td><td>am/is/are + V3</td><td><span class="ex">The machine is checked every morning.</span></td></tr>
+        <tr><td>Simple Past</td><td>was/were + V3</td><td><span class="ex">The machine was repaired yesterday.</span></td></tr>
+        <tr><td>Present Perfect</td><td>has/have been + V3</td><td><span class="ex">The report has been submitted.</span></td></tr>
+        <tr><td>Simple Future</td><td>will be + V3</td><td><span class="ex">The project will be completed next month.</span></td></tr>
+        <tr><td>Modal + Pasif</td><td>modal + be + V3</td><td><span class="ex">The policy should be revised.</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- BAB 4 -->
+  <section class="panel" data-panel="3">
+    <h2>Conditional Sentences dan Reported Speech</h2>
+
+    <h3>A. Conditional Sentences</h3>
+    <p>Conditional sentences (kalimat pengandaian) menyatakan kondisi dan akibat yang mungkin terjadi, baik dalam konteks nyata (real) maupun hipotesis (unreal).</p>
+    <table>
+      <thead><tr><th>Tipe</th><th>Fungsi</th><th>Pola</th><th>Contoh</th></tr></thead>
+      <tbody>
+        <tr><td>Type 1</td><td>Kemungkinan nyata di masa depan</td><td>If + present, will + V1</td><td><span class="ex">If it rains, we will stay at home.</span></td></tr>
+        <tr><td>Type 2</td><td>Pengandaian tidak sesuai kenyataan saat ini</td><td>If + past, would + V1</td><td><span class="ex">If I had more time, I would travel more.</span></td></tr>
+        <tr><td>Type 3</td><td>Pengandaian terhadap kejadian masa lalu yang tidak terjadi</td><td>If + past perfect, would have + V3</td><td><span class="ex">If she had studied harder, she would have passed the exam.</span></td></tr>
+        <tr><td>Mixed Conditional</td><td>Kondisi masa lalu, akibat di masa kini (atau sebaliknya)</td><td>If + past perfect, would + V1</td><td><span class="ex">If she had taken that job, she would be living abroad now.</span></td></tr>
+      </tbody>
+    </table>
+
+    <h3>B. Reported Speech dan Modal Verbs</h3>
+    <p>Reported speech digunakan untuk melaporkan ucapan orang lain secara tidak langsung. Perubahan dari kalimat langsung ke tidak langsung umumnya disertai perubahan tense (disebut <i>backshift</i>), perubahan kata ganti, dan kata keterangan waktu/tempat.</p>
+    <table>
+      <thead><tr><th>Kalimat Langsung</th><th>Reported Speech</th></tr></thead>
+      <tbody>
+        <tr><td><span class="ex">"I am tired," she said.</span></td><td><span class="ex">She said (that) she was tired.</span></td></tr>
+        <tr><td><span class="ex">"Submit the report by Friday," he said.</span></td><td><span class="ex">He told us to submit the report by Friday.</span></td></tr>
+        <tr><td><span class="ex">"What time will the meeting start?" she asked.</span></td><td><span class="ex">She asked what time the meeting would start.</span></td></tr>
+      </tbody>
+    </table>
+    <p>Modal verbs digunakan untuk menyatakan kemampuan, kemungkinan, izin, atau keharusan. Beberapa modal yang sering diuji:</p>
+    <ul>
+      <li><b>Can / Could</b> — kemampuan (ability)</li>
+      <li><b>Must</b> — keharusan kuat atau kepastian logis (strong obligation / logical certainty)</li>
+      <li><b>Should / Ought to</b> — saran atau anjuran (advice)</li>
+      <li><b>May / Might</b> — izin atau kemungkinan (permission / possibility)</li>
+    </ul>
+  </section>
+
+  <!-- BAB 5 -->
+  <section class="panel" data-panel="4">
+    <h2>Jenis-Jenis Teks (Genre)</h2>
+    <p>Setiap jenis teks memiliki struktur generik dan tujuan komunikasi yang berbeda. Mengenali pola strukturnya membantu siswa menjawab soal genre dengan lebih cepat dan tepat.</p>
+
+    <h3>A. Narrative, Recount, dan Descriptive Text</h3>
+    <table>
+      <thead><tr><th>Jenis Teks</th><th>Tujuan</th><th>Struktur Umum</th></tr></thead>
+      <tbody>
+        <tr><td>Narrative</td><td>Menghibur pembaca melalui rangkaian peristiwa</td><td>Orientation → Complication → Resolution</td></tr>
+        <tr><td>Recount</td><td>Menceritakan kembali pengalaman/kejadian secara kronologis, tanpa konflik yang harus diselesaikan</td><td>Orientation → Events (kronologis) → Reorientation</td></tr>
+        <tr><td>Descriptive</td><td>Menggambarkan ciri-ciri spesifik suatu objek, tempat, atau orang secara rinci</td><td>Identification → Description</td></tr>
+      </tbody>
+    </table>
+
+    <h3>B. Report, Analytical Exposition, dan Procedure Text</h3>
+    <table>
+      <thead><tr><th>Jenis Teks</th><th>Tujuan</th><th>Struktur Umum</th></tr></thead>
+      <tbody>
+        <tr><td>Report</td><td>Menyajikan informasi umum mengenai suatu fenomena/kategori secara sistematis (berbeda dengan descriptive yang fokus pada objek spesifik)</td><td>General Classification → Description</td></tr>
+        <tr><td>Analytical Exposition</td><td>Meyakinkan pembaca terhadap suatu isu melalui argumen yang didukung alasan logis</td><td>Thesis → Arguments → Reiteration</td></tr>
+        <tr><td>Procedure</td><td>Berisi langkah-langkah sistematis untuk mencapai tujuan tertentu, umum dalam konteks instruksi kerja</td><td>Goal → Materials (jika ada) → Steps</td></tr>
+      </tbody>
+    </table>
+    <div class="callout"><b>Cara cepat membedakan Report vs Descriptive:</b> Report membahas kategori/kelompok secara umum (misalnya "Solar panels..."), sedangkan Descriptive membahas satu objek spesifik secara rinci (misalnya "The Eiffel Tower...").</div>
+  </section>
+
+  <!-- BAB 6 -->
+  <section class="panel" data-panel="5">
+    <h2>Reading Comprehension dan Vocabulary in Context</h2>
+    <p>Kemampuan membaca kritis menjadi kunci utama dalam menjawab soal reading comprehension tingkat SMA/SMK, yang menuntut siswa memahami ide pokok, informasi rinci, serta tujuan penulisan suatu teks.</p>
+    <ul>
+      <li><b>Ide pokok (main idea)</b> biasanya terletak pada kalimat topik di awal atau akhir paragraf, namun terkadang perlu disimpulkan dari keseluruhan isi paragraf.</li>
+      <li><b>Informasi rinci (specific information)</b> menuntut ketelitian mencocokkan pertanyaan dengan detail yang tertulis secara eksplisit dalam teks — biasanya dijawab dengan teknik <i>scanning</i>.</li>
+      <li><b>Tujuan penulis (author's purpose)</b> dapat dikenali dari gaya bahasa dan jenis teks: apakah bertujuan menginformasikan (report/explanation), meyakinkan (analytical exposition/hortatory), atau menghibur (narrative).</li>
+      <li><b>Referensi kata (reference)</b> — memahami kata ganti (it, this, they, those) merujuk pada frasa/kalimat mana sebelumnya.</li>
+      <li><b>Vocabulary in context</b> menuntut siswa menentukan makna kata sulit berdasarkan petunjuk konteks kalimat, seperti sinonim, antonim, atau penjelasan yang menyertainya — bukan sekadar hafalan arti kata.</li>
+    </ul>
+    <div class="callout"><b>Contoh vocabulary in context:</b> "The policy is controversial; many employees are <span class="ex">skeptical</span> about its benefits." Kata <i>skeptical</i> dapat ditebak maknanya ("ragu-ragu/doubtful") dari konteks "controversial" dan "many employees" yang menunjukkan sikap tidak yakin.</div>
+  </section>
+
+  <!-- BAB 7 -->
+  <section class="panel" data-panel="6">
+    <h2>Tips dan Strategi Belajar Efektif</h2>
+    <p>Strategi belajar TKA Bahasa Inggris SMA/SMK yang efektif, dirangkum menjadi langkah-langkah praktis:</p>
+    <ol>
+      <li><b>Pelajari tenses secara komparatif</b> menggunakan tabel pola, bukan menghafal satu per satu secara terpisah, agar lebih mudah membedakan penggunaannya.</li>
+      <li><b>Perbanyak latihan membaca berbagai jenis teks</b> (narrative, report, exposition, dsb.) untuk mengenali struktur dan ciri khas masing-masing genre dengan cepat.</li>
+      <li><b>Latih reading comprehension dengan teknik skimming dan scanning</b> — skimming untuk menemukan ide pokok, scanning untuk mencari informasi rinci secara efisien.</li>
+      <li><b>Tebak makna kata sulit dari konteks kalimat sekitar</b> sebelum mencari arti secara harfiah, karena TKA menekankan pemahaman kontekstual, bukan hafalan kosakata.</li>
+      <li><b>Simulasikan pengerjaan soal dengan batas waktu</b> agar terbiasa mengelola waktu membaca teks panjang secara efisien.</li>
+    </ol>
+    <div class="callout">Konsistensi berlatih membaca berbagai jenis teks berbahasa Inggris, baik akademik maupun praktis, akan membangun kepekaan terhadap pola soal dan mempercepat pemahaman saat ujian berlangsung.</div>
+  </section>
+
+  <!-- BAB 8 -->
+  <section class="panel" data-panel="7">
+    <h2>Contoh Soal, Pembahasan, dan Penutup</h2>
+    <p>Berikut contoh soal yang merepresentasikan pola soal TKA Bahasa Inggris SMA/SMK, disajikan dalam <b>tiga variasi bentuk soal</b> yang umum dipakai: Pilihan Ganda sederhana, Pilihan Ganda Kompleks, dan Pilihan Ganda Kompleks Kategori.</p>
+
+    <div class="soal-card">
+      <span class="soal-type-badge">Pilihan Ganda Sederhana</span>
+      <span class="soal-num">Contoh 1 · Grammar (Tenses)</span>
+      <div class="soal-q">Choose the correct sentence: "By the time the manager arrived, the team ___ the report."</div>
+      <ol class="soal-opts" type="A">
+        <li>finish</li><li>finished</li><li class="opt-correct">had finished</li><li>will finish</li>
+      </ol>
+      <div class="soal-ans">Jawaban: C — had finished</div>
+      <div class="soal-exp">Kalimat ini menyatakan kejadian yang sudah selesai sebelum kejadian lain di masa lalu ("the manager arrived"), sehingga bentuk yang tepat adalah past perfect tense. Bentuk soal ini hanya memiliki <b>satu jawaban benar</b>.</div>
+    </div>
+
+    <div class="soal-card">
+      <span class="soal-type-badge">Pilihan Ganda Sederhana</span>
+      <span class="soal-num">Contoh 2 · Vocabulary in Context</span>
+      <div class="soal-q">"The new policy is quite controversial; many employees are skeptical about its benefits." The word "skeptical" is closest in meaning to...</div>
+      <ol class="soal-opts" type="A">
+        <li>Confident</li><li class="opt-correct">Doubtful</li><li>Enthusiastic</li><li>Indifferent</li>
+      </ol>
+      <div class="soal-ans">Jawaban: B — Doubtful</div>
+      <div class="soal-exp">Berdasarkan konteks kalimat yang menyebut kebijakan "controversial", kata "skeptical" paling dekat maknanya dengan "doubtful" (ragu-ragu).</div>
+    </div>
+
+    <div class="soal-card">
+      <span class="soal-type-badge">Pilihan Ganda Kompleks</span>
+      <span class="soal-num">Contoh 3 · Reading Comprehension (Jawaban Lebih dari Satu)</span>
+      <div class="soal-q">Read the text: "To operate the machine safely, first check the power switch. Make sure the safety guard is in place before turning it on. Never leave the machine running unattended." Which of the following statements are true about this text? (Jawaban lebih dari satu)</div>
+      <ul class="soal-check-opts">
+        <li class="opt-correct"><input type="checkbox" checked disabled> It gives systematic steps to operate a machine safely</li>
+        <li><input type="checkbox" disabled> It tells a personal story about using a machine</li>
+        <li class="opt-correct"><input type="checkbox" checked disabled> It is an example of a procedure text</li>
+        <li><input type="checkbox" disabled> It aims to persuade readers through logical arguments</li>
+        <li class="opt-correct"><input type="checkbox" checked disabled> It warns readers not to leave the machine unattended</li>
+      </ul>
+      <div class="soal-ans">Jawaban: A, C, dan E</div>
+      <div class="soal-exp">Teks ini berisi langkah sistematis (ciri procedure text) dan secara eksplisit memperingatkan agar mesin tidak ditinggalkan tanpa pengawasan. Bentuk soal ini memiliki <b>lebih dari satu jawaban benar</b>, sehingga siswa harus mencentang semua pernyataan yang tepat, bukan hanya memilih satu.</div>
+    </div>
+
+    <div class="soal-card">
+      <span class="soal-type-badge">Pilihan Ganda Kompleks</span>
+      <span class="soal-num">Contoh 4 · Grammar (Conditional Sentences, Jawaban Lebih dari Satu)</span>
+      <div class="soal-q">Which of the following sentences are examples of Conditional Type 3? (Jawaban lebih dari satu)</div>
+      <ul class="soal-check-opts">
+        <li class="opt-correct"><input type="checkbox" checked disabled> If she had studied harder, she would have passed the exam.</li>
+        <li><input type="checkbox" disabled> If it rains, we will stay at home.</li>
+        <li class="opt-correct"><input type="checkbox" checked disabled> If they had left earlier, they would have caught the train.</li>
+        <li><input type="checkbox" disabled> If I had more time, I would travel more.</li>
+        <li class="opt-correct"><input type="checkbox" checked disabled> If he had known the truth, he would have told you.</li>
+      </ul>
+      <div class="soal-ans">Jawaban: A, C, dan E</div>
+      <div class="soal-exp">Ketiga kalimat tersebut menggunakan pola "If + past perfect, would have + V3" yang menandakan pengandaian terhadap kejadian masa lalu yang tidak terjadi (Conditional Type 3).</div>
+    </div>
+
+    <div class="soal-card">
+      <span class="soal-type-badge">Pilihan Ganda Kompleks Kategori</span>
+      <span class="soal-num">Contoh 5 · Grammar (Mencocokkan Tenses ke Kategori)</span>
+      <div class="soal-q">Classify each sentence according to its tense.</div>
+      <table class="soal-cat-table">
+        <thead><tr><th></th><th>Simple Present</th><th>Simple Past</th><th>Present Perfect</th></tr></thead>
+        <tbody>
+          <tr><td>Water boils at 100°C.</td><td class="cell-correct">✓</td><td></td><td></td></tr>
+          <tr><td>They visited Bali last year.</td><td></td><td class="cell-correct">✓</td><td></td></tr>
+          <tr><td>I have finished my homework.</td><td></td><td></td><td class="cell-correct">✓</td></tr>
+        </tbody>
+      </table>
+      <div class="soal-exp">Pada bentuk soal ini, siswa mencocokkan setiap kalimat ke <b>satu kategori/kolom yang tepat</b> dalam sebuah tabel — bukan memilih dari daftar opsi biasa. Cocok digunakan untuk menguji kemampuan mengklasifikasikan tenses, tipe conditional, atau jenis teks sekaligus dalam satu soal.</div>
+    </div>
+
+    <div class="soal-card">
+      <span class="soal-type-badge">Pilihan Ganda Kompleks Kategori</span>
+      <span class="soal-num">Contoh 6 · Genre (Mencocokkan Jenis Teks ke Kategori)</span>
+      <div class="soal-q">Classify each text opening according to its text type (genre).</div>
+      <table class="soal-cat-table">
+        <thead><tr><th></th><th>Narrative</th><th>Report</th><th>Procedure</th></tr></thead>
+        <tbody>
+          <tr><td>"Once upon a time, in a small village, there lived a wise old woman..."</td><td class="cell-correct">✓</td><td></td><td></td></tr>
+          <tr><td>"Solar panels convert sunlight into electricity through photovoltaic cells..."</td><td></td><td class="cell-correct">✓</td><td></td></tr>
+          <tr><td>"First, unplug the device. Next, remove the back cover carefully..."</td><td></td><td></td><td class="cell-correct">✓</td></tr>
+        </tbody>
+      </table>
+      <div class="soal-exp">Ciri pembuka masing-masing genre cukup khas: narrative diawali orientasi cerita ("once upon a time"), report menjelaskan fenomena/kategori secara umum, dan procedure langsung memberi instruksi bertahap.</div>
+    </div>
+
+    <h3>Penutup</h3>
+    <p>Penguasaan Bahasa Inggris tingkat SMA/SMK yang baik terletak pada kemampuan memahami struktur tata bahasa secara kontekstual dan mengenali ragam jenis teks dengan cepat. Latihan membaca yang konsisten serta pemahaman mendalam terhadap grammar akan membekali siswa tidak hanya untuk menghadapi TKA, tetapi juga untuk kebutuhan akademik dan dunia kerja di masa mendatang.</p>
+  </section>
+
+  <div class="nav-buttons">
+    <button class="nav-btn" id="prevBtn">← Bab Sebelumnya</button>
+    <button class="nav-btn" id="nextBtn">Bab Selanjutnya →</button>
+  </div>
+
+  <footer class="note">Disusun oleh Taslim Siolimbona, S.Pd. — Rangkuman &amp; pengembangan materi berdasarkan kisi-kisi umum TKA Bahasa Inggris SMA/SMK.</footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab-btn');
+  const panels = document.querySelectorAll('.panel');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  let current = 0;
+
+  function goTo(index){
+    if(index < 0 || index >= tabs.length) return;
+    current = index;
+    tabs.forEach((t,i)=> t.classList.toggle('active', i===index));
+    panels.forEach((p,i)=> p.classList.toggle('active', i===index));
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = index === tabs.length-1;
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+
+  tabs.forEach((t,i)=> t.addEventListener('click', ()=> goTo(i)));
+  prevBtn.addEventListener('click', ()=> goTo(current-1));
+  nextBtn.addEventListener('click', ()=> goTo(current+1));
+  goTo(0);
+</script>
+</body>
+</html>
